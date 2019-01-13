@@ -1,29 +1,30 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Products</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Ürün Adı</th>
-      <th>Marka</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.productname %></td>
-        <td><%= product.brand %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="container">
+  <div class="row">
+    <div class="text-center col-md-offset-6 col-md-12">
+      <%= link_to 'Yeni Ürün Ekle', new_product_path, :class => 'btn btn-primary' %>
+      <a href="/" class="btn btn-secondary" style="margin-left: 20px">Markalara Dön</a>
+    </div>
+  </div>
+  <br />
+  <hr />
+  <div class="row mt-3">
+      <div class="text-center col-md-offset-6 col-md-12">
+    <h4>Ürünler</h4>
+      </div>
+    <br />
+  </div>
+<div class="row mt-3" id= "container_posts">
+  <% @products.each do |product| %>
+    <div class="card" style="width: 18rem; margin-left: 15px; margin-bottom: 10px">
+  <div class="card-body">
+      <h5 class="card-title"><span style="color:rgb(109, 142, 255);font-weight:bold">Ürün Adı:</span>  <%= product.productname %></h5>
+    <h6 class="card-title"><span style="color:rgb(45, 47, 78);font-weight:bold">Markası:</span>  <%= product.brand.brandname %></h6>
+    <br />
+    <%= link_to 'Göster', product, :class => 'btn btn-primary' %>
+    <%= link_to 'Düzenle', edit_product_path(product), :class => 'btn btn-secondary' %>
+    <%= link_to 'Sil', product, method: :delete, data: { confirm: 'Silmek istediğinize eminmisiniz?' }, :class => 'btn btn-danger' %>
+  </div>
+</div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+</div>
+</div>
