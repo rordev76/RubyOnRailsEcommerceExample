@@ -18,7 +18,7 @@
     <div class="card" style="width: 18rem; margin-left: 15px; margin-bottom: 10px">
   <div class="card-body">
       <h5 class="card-title"><span style="color:rgb(109, 142, 255);font-weight:bold">Ürün Adı:</span>  <%= product.productname %></h5>
-    <h6 class="card-title"><span style="color:rgb(45, 47, 78);font-weight:bold">Markası:</span>  <%= product.brand.brandname %></h6>
+      <h6 class="card-title"><span style="color:rgb(45, 47, 78);font-weight:bold">Markası:</span>  <%= product.brand.brandname %></h6>
     <br />
     <%= link_to 'Göster', product, :class => 'btn btn-primary' %>
     <%= link_to 'Düzenle', edit_product_path(product), :class => 'btn btn-secondary' %>

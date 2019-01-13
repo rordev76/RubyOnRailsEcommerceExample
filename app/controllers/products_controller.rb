@@ -3,6 +3,8 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @brands = Brand.all
+    @brand = Brand.new
   end
 
 
