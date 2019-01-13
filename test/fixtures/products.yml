@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  productname: MyString
+  brand: one
+
+two:
+  productname: MyString
+  brand: two
