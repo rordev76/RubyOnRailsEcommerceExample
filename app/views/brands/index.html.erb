@@ -6,6 +6,7 @@
       >
         Yeni Marka Ekle
       </button>
+      <a href="/products" class="btn btn-primary" style="margin-left: 10px">Ürünler</a>
     </div>
   </div>
   <br />
@@ -52,7 +53,7 @@
         <div class="modal-body">
         <div class="field">
         <p>Marka</p><br>
-        <%= brand.text_area :brandname, class:"form-control brand_title" %><br>
+        <%= brand.text_field :brandname, class:"form-control brand_title" %><br>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">
